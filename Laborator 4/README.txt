@@ -1,0 +1,1 @@
+Am incercat tot ce am gasit pe internet dar tot nu am reusit sa instalez Entity Framework folosind NuGet. Astfel, nu am putut sa testez laboratorul si sa il termin.
