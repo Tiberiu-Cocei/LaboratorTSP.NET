@@ -1,0 +1,1 @@
+In proiectul acesta sunt doua laboratoare deoarece in cerinta laboratorului 5 spunea "Intr-un proiect deja creat". Cand am facut laboratorul nu zicea in cerinta sa fie CUI/GUI proiectul.
