@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelBDStoreContainer">
+    <EntitySet Name="Files" EntityType="ModelBD.Store.Files" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PropertyLists" EntityType="ModelBD.Store.PropertyLists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Properties" EntityType="ModelBD.Store.Properties" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FilePropertyList" Association="ModelBD.Store.FilePropertyList">
+      <End Role="File" EntitySet="Files" />
+      <End Role="PropertyList" EntitySet="PropertyLists" />
+    </AssociationSet>
+    <AssociationSet Name="PropertyListProperty" Association="ModelBD.Store.PropertyListProperty">
+      <End Role="PropertyList" EntitySet="PropertyLists" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Size" Type="float" Nullable="false" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="ToDelete" Type="bit" Nullable="false" DefaultValue="false" />
+  </EntityType>
+  <EntityType Name="PropertyLists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileId" Type="int" Nullable="false" />
+    <Property Name="PropertyId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Properties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="FilePropertyList">
+    <End Role="File" Type="ModelBD.Store.Files" Multiplicity="1" />
+    <End Role="PropertyList" Type="ModelBD.Store.PropertyLists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="File">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PropertyList">
+        <PropertyRef Name="FileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PropertyListProperty">
+    <End Role="PropertyList" Type="ModelBD.Store.PropertyLists" Multiplicity="*" />
+    <End Role="Property" Type="ModelBD.Store.Properties" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PropertyList">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelBDContainer1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Files" EntityType="ModelBD.File" />
+          <EntitySet Name="PropertyLists" EntityType="ModelBD.PropertyList" />
+          <EntitySet Name="Properties" EntityType="ModelBD.Property" />
+          <AssociationSet Name="FilePropertyList" Association="ModelBD.FilePropertyList">
+            <End Role="File" EntitySet="Files" />
+            <End Role="PropertyList" EntitySet="PropertyLists" />
+          </AssociationSet>
+          <AssociationSet Name="PropertyListProperty" Association="ModelBD.PropertyListProperty">
+            <End Role="PropertyList" EntitySet="PropertyLists" />
+            <End Role="Property" EntitySet="Properties" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="40" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="200" />
+          <Property Name="Size" Type="Double" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="ToDelete" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <NavigationProperty Name="PropertyLists" Relationship="ModelBD.FilePropertyList" FromRole="File" ToRole="PropertyList" />
+        </EntityType>
+        <EntityType Name="PropertyList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="File" Relationship="ModelBD.FilePropertyList" FromRole="PropertyList" ToRole="File" />
+          <Property Name="FileId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Property" Relationship="ModelBD.PropertyListProperty" FromRole="PropertyList" ToRole="Property" />
+          <Property Name="PropertyId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" />
+          <NavigationProperty Name="PropertyLists" Relationship="ModelBD.PropertyListProperty" FromRole="Property" ToRole="PropertyList" />
+        </EntityType>
+        <Association Name="FilePropertyList">
+          <End Type="ModelBD.File" Role="File" Multiplicity="1" />
+          <End Type="ModelBD.PropertyList" Role="PropertyList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PropertyList">
+              <PropertyRef Name="FileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PropertyListProperty">
+          <End Type="ModelBD.PropertyList" Role="PropertyList" Multiplicity="*" />
+          <End Type="ModelBD.Property" Role="Property" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Property">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PropertyList">
+              <PropertyRef Name="PropertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelBDStoreContainer" CdmEntityContainer="ModelBDContainer1">
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelBD.File)">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ToDelete" ColumnName="ToDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PropertyLists">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelBD.PropertyList)">
+        <MappingFragment StoreEntitySet="PropertyLists">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelBD.Property)">
+        <MappingFragment StoreEntitySet="Properties">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
