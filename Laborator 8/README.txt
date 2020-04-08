@@ -1,0 +1,1 @@
+Am avut aceeasi problema ca la laboratorul 4. NuGet nu gaseste proiecte de .NET Core si din cauza asta nu am putut instala package-urile necesare pentru client.
