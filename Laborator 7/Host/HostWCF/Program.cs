@@ -5,6 +5,16 @@ using System.ServiceModel.Description;
 
 namespace HostWCF
 {
+    /// <summary>
+    /// Nume si prenume: Cocei Tiberiu
+    /// Laborator: Miercuri 16-18
+    /// Tema proiect: MyPhotos Proiectul 2
+    /// Data predare proiect: 08.04.2020
+    /// Bibliografie, surse de inspiratie: https://profs.info.uaic.ro/~iasimin/Laborator%20C%20S%20H/Laborator%20WCF%202020.pdf
+    /// Rolul clasei: Host ce permite clientului sa se foloseasca
+    /// de serviciul din proiectul ObjectWCF. De asemenea, se
+    /// poate extrage metadata necesara pentru client.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

@@ -1,0 +1,4 @@
+Am adaugat atributele [DataContract(IsReference=true)] si [DataMember] in clasele din ModelBD.tt
+Am adaugat in ModelBD.Context.cs liniile de cod
+Configuration.LazyLoadingEnabled = false;
+Configuration.ProxyCreationEnabled = false;

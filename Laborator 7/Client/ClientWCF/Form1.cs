@@ -13,13 +13,13 @@ namespace ClientWCF
     /// <summary>
     /// Nume si prenume: Cocei Tiberiu
     /// Laborator: Miercuri 16-18
-    /// Tema proiect: MyPhotos Proiectul 1
-    /// Data predare proiect: 16.03.2020
+    /// Tema proiect: MyPhotos Proiectul 2
+    /// Data predare proiect: 08.04.2020
     /// Declaratie: Subsemnatul Cocei Tiberiu declar pe propria raspundere 
     /// ca acest cod nu a fost copiat din Internet sau din alte surse.
-    /// Bibliografie, surse de inspiratie:
+    /// Bibliografie, surse de inspiratie: https://profs.info.uaic.ro/~iasimin/Laborator%20C%20S%20H/Laborator%20WCF%202020.pdf
     /// Rolul clasei: initializarea interfetei si tratarea evenimentelor ce au loc.
-    /// Permite utilizatorului sa se foloseasca de API-uri prin intermediul unei 
+    /// Permite utilizatorului sa se foloseasca de serviciu prin intermediul unei 
     /// interfete grafice. De asemenea, permite deschiderea fisierelor selectate.
     /// </summary>
     public partial class Form1 : Form
@@ -41,6 +41,10 @@ namespace ClientWCF
         /// vor fi folosite in alta metoda.
         /// </summary>
         private FileProperty.File FileToAdd;
+        /// <summary>
+        /// Obiect al clasei generate de utilitar. Prin intermediul lui se va apela
+        /// serviciul din Host.
+        /// </summary>
         private FilePropertyClient FilePropertyClient;
 
         public Form1()
