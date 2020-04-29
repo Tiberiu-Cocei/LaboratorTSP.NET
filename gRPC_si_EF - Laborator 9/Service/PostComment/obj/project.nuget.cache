@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bPWSNEc3bPBrS6POjI7AjXTofkGyjR5M5rfvw2eteY2mePFOH0aPVy+NX4cuGunq312ie6KsbhHdCr69hlRr7w==",
+  "success": true,
+  "projectFilePath": "D:\\Informatica\\Anul 3 Semestrul 2\\TSP.NET\\TS.NET\\gRPC_si_EF - Laborator 9\\Service\\PostComment\\PostComment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tiberiu\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

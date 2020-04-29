@@ -1,0 +1,5 @@
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\Service\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.csprojAssemblyReference.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\Service\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.csproj.CoreCompileInputs.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\Service\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.MvcApplicationPartsAssemblyInfo.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\Service\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.AssemblyInfoInputs.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\Service\GrpcGreeter\obj\Debug\netcoreapp3.1\GrpcGreeter.AssemblyInfo.cs

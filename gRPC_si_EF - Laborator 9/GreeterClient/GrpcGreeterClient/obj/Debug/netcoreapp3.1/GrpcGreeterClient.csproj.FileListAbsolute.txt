@@ -1,0 +1,10 @@
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\GrpcGreeterClient.exe
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\obj\Debug\netcoreapp3.1\GrpcGreeterClient.AssemblyInfoInputs.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\obj\Debug\netcoreapp3.1\GrpcGreeterClient.AssemblyInfo.cs
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\obj\Debug\netcoreapp3.1\GrpcGreeterClient.csprojAssemblyReference.cache
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\obj\Debug\netcoreapp3.1\GrpcGreeterClient.csproj.CopyComplete
+D:\Informatica\Anul 3 Semestrul 2\TSP.NET\TS.NET\gRPC_si_EF - Laborator 9\GreeterClient\GrpcGreeterClient\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
