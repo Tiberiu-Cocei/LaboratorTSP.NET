@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pPBK1GNssrO4EzaxBr+571xo88vnbfzIaB1D+nlytUAzqlgI6UlkGbHLouHaU3xbZTY5zcdBvPD6c40g7Y41MQ==",
+  "success": true,
+  "projectFilePath": "D:\\Informatica\\Anul 3 Semestrul 2\\TSP.NET\\Lab6\\HostWCF\\HostWCF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tiberiu\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
