@@ -1,0 +1,58 @@
+﻿@page
+@model Proiect3.Pages.File.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a>Number of files found is: @Html.DisplayFor(model => model.Files.Count)</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].Path)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Files[0].CreationDate)
+            </th>
+	    <th>
+                @Html.DisplayNameFor(model => model.Files[0].Properties)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Files) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+	    <td>
+                @Html.DisplayFor(modelItem => item.Properties)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

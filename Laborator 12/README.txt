@@ -1,0 +1,1 @@
+Fisierele din folderul "Host" sunt identice cu cele din Proiectul 2.
